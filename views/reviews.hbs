@@ -1,0 +1,22 @@
+<section class="hero">
+    <div class="reviews header-hero">
+        <div class="hero-wrap">
+            <h1>{{ title }}</h1>
+            <a class="arrow-down down" href="#">
+                <i class="material-icons">
+                expand_more
+                </i>
+            </a>
+        </div>
+    </div>
+    <p class="contacts-p">Хочешь оставить отзыв? Заполните форму и отправьте!</p>
+    <div class="container">
+        <form class="form">
+            <input class="form-item" name="name" type="text" placeholder="Имя">
+            <input class="form-item" name="email" type="email" placeholder="Почта">
+            <input class="form-item" name="phone" type="phone" placeholder="Телефон">
+            <textarea class="form-item" name="text" placeholder="Собщение"></textarea>
+            <input class="button-submit" type="submit" onClick="event.preventDefault(); submitReview(this.form)" value="Отправить">
+        </form>
+    </div>
+</section>

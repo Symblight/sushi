@@ -1,0 +1,92 @@
+{
+    "admin": {
+      "email": "admin@sushi.by",
+      "password": "admin"  
+    },
+    "sushi":[
+        {
+            "id": 0,
+            "title": "Рамэн",
+            "imgURL": "img/sushi/ff55960ca9189c0531f08e2f4e1d637b.jpeg"
+        },
+        {
+            "id": 1,
+            "title": "Wok",
+            "imgURL": "img/sushi/6f15bc6d6c686b45afc1002869a77e66.jpeg"
+        },
+        {
+            "id": 2,
+            "title": "Роллы",
+            "imgURL": "img/sushi/2e9aee28e31b10001df256940431946a.jpeg"
+        },
+        {
+            "id": 3,
+            "title": "Запеченные роллы",
+            "imgURL": "img/sushi/4c8ec1eef93a5354571990cb8742f1f7.jpeg"
+        },
+        {
+            "id": 4,
+            "title": "Наборы",
+            "imgURL": "img/sushi/bd17b084db56729baab21ffbf78100cc.jpeg"
+        },
+        {
+            "id": 5,
+            "title": "Суши",
+            "imgURL": "img/sushi/dfcf9976969e8644957939e7ef94f2f5.jpeg"
+        },
+        {
+            "id": 6,
+            "title": "Питас",
+            "imgURL": "img/sushi/d4e33264d595113d6370f3b3dda001c8.jpeg"
+        },
+        {
+            "id": 7,
+            "title": "Пицца",
+            "imgURL": "img/sushi/0238d2bcb99250bc26cdd2cb77eff651.jpeg"
+        },
+        {
+            "id": 8,
+            "title": "Салаты и закуски",
+            "imgURL": "img/sushi/f731f0370f3c9e7dbe6e40e7e8ec0cf4.jpeg"
+        }
+    ],
+    "jobs":[
+        {
+            "id": 0,
+            "name": "Вика",
+            "email": "vik@gmail.co",
+            "phone": "+37533445566",
+            "text": "Примите пожалуйста"
+        },
+        {
+            "id": 1,
+            "name": "Анастасия",
+            "email": "nike@gmail.co",
+            "phone": "+37529425499",
+            "text": "Хотела бы работать у вас"
+        },
+        {
+            "id": 2,
+            "name": "Дмитрий",
+            "email": "dmd@gmail.co",
+            "phone": "+37529429423",
+            "text": "Умею делать суши"
+        },
+        {
+            "id": 3,
+            "name": "Светлана",
+            "email": "svtl@gmail.co",
+            "phone": "+37529569411",
+            "text": "Умею делать все"
+        }
+    ],
+    "reviews":[
+        {
+            "id": 0,
+            "name": "",
+            "email": "",
+            "phone": "",
+            "text": ""
+        }
+    ]
+}

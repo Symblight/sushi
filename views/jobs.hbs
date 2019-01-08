@@ -1,0 +1,13 @@
+<div class="container">
+    <h1 class="hero-jobs">{{title}}</h1>
+    <p class="contacts-p">Хотите работать с нами? Свяжитесь с нами!</p>
+    <div class="container">
+        <form class="form">
+            <input class="form-item" name="name" type="text" placeholder="Имя">
+            <input class="form-item" name="email" type="email" placeholder="Почта">
+            <input class="form-item" name="phone" type="phone" placeholder="Телефон">
+            <textarea class="form-item" name="text" placeholder="Собщение"></textarea>
+            <input class="button-submit" type="submit" onClick="event.preventDefault(); submitJobs(this.form)" value="Отправить">
+        </form>
+    </div>
+</div>

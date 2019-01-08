@@ -1,0 +1,20 @@
+<div class="container">
+    <h1>{{ title }}</h1>
+    <div class="price">
+        {{#each price}}
+            <div class="sushi">
+                <img src="{{imgURL}}" alt="{{title}}"/>
+                <span class="sushi-title">{{title}}</span>
+                <span class="suschi-cover"></span>
+            </div>
+        {{/each}}
+    </div>
+    	<div class="modal-wrap" id="promotion-modal">
+			<div class="modal-content">
+                 <div class="hero">
+                    <img src="img/promotion.jpg" alt="promotion" />
+                </div>
+			</div>
+            <i class="material-icons close-modal" onclick="closePromotion()">clear</i>
+		</div>
+</div>

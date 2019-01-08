@@ -1,0 +1,29 @@
+<div class="container">
+    <h1>{{title}}</h1>
+    <div>
+        <span>Письма на вакансии:</span>
+        <div class="jobs-list">
+            {{#each jobs}}
+                <article class="job-article">
+                    <div class="job-title">Заявка #{{id}}</div>
+                    <div class="description">
+                        <span>Имя: {{name}}</span>
+                        <span>Почта: {{email}}</span>
+                        <span>Телефон: {{phone}}</span>
+                        <p>{{text}}</p>
+                    </div>
+                </article>
+            {{/each}}
+        </div>
+    </div>
+    <div class="modal-wrap" id="auth-modal">
+        <div class="modal-content" >
+            <h2>Авторизация</h2>
+            <form class="form">
+                <input class="form-item" name="email" type="email" placeholder="email" value="admin@sushi.by" />
+                <input class="form-item" name="password" type="password" placeholder="password" value="admin" />
+                <input class="button-submit"  type="submit" onClick="event.preventDefault(); submitAuth(this.form)" value="Войти" />
+            </form>
+        </div>
+    </div>
+</div>
