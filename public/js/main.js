@@ -35,10 +35,14 @@ function submitJobs(form) {
             "Content-Type": "application/json; charset=utf-8"
         },
         dataType: "json",
-        success: function(data){alert(data);},
+        success: function(data){alert("fgfgf");},
         failure: function(errMsg) {
             alert(errMsg);
-        }
+        },
+        complete: function () {
+            // Handle the complete event
+            alert("Заявка отправлена!");
+          }
     });
 }
 
@@ -60,10 +64,16 @@ function submitReview(form) {
             "Content-Type": "application/json; charset=utf-8"
         },
         dataType: "json",
-        success: function(data){alert(data);},
+        success: function(data){
+            alert(111);
+        },
         failure: function(errMsg) {
             alert(errMsg);
-        }
+        },
+        complete: function () {
+            // Handle the complete event
+            alert("ajax completed ");
+          }
     });
 }
 
@@ -104,5 +114,19 @@ document.addEventListener('keydown', (event) => {
 
 function closePromotion () {
     var modal = document.getElementById('promotion-modal');
+    modal.style.display = "none";
+}
+
+function onDelete(id) {
+    var modal = document.querySelector('.modal-wrap');
+    modal.style.display = "none";
+
+   // var item = document.getElementById(id);
+
+    console.log(id)
+}
+
+function onCancel() {
+    var modal = document.querySelector('.modal-wrap');
     modal.style.display = "none";
 }

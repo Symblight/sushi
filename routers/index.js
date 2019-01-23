@@ -42,11 +42,30 @@ router.get('/jobs', function (req, res) {
     });
 });
 
+router.get('/price-list', function (req, res) {
+    res.render('price', {
+        title: 'Прайс-лист',
+        price: data.sushi,
+    });
+});
+
 router.get('/admin', function (req, res) {
     res.render('admin', {
         title: 'Административная панель',
         auth: false,
         jobs: data.jobs
+    });
+});
+
+router.get('/auth', function (req, res) {
+    res.render('auth', {
+        title: 'Авторизация',
+    });
+});
+
+router.get('/reg', function (req, res) {
+    res.render('reg', {
+        title: 'Регистрация',
     });
 });
 

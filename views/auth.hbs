@@ -1,2 +1,35 @@
-<h1>{{ title }}</h1>
-<span>auth page {{ title }}</span>
+<section class="container">
+    <h1>{{title}}</h1>
+    <form class="form">
+        <input class="form-item" name="email" type="email" placeholder="Почта">
+        <input class="form-item" name="password" type="password" placeholder="password">
+        <input class="button-submit" type="submit" onclick="event.preventDefault();" value="Войти">
+    </form>
+    <span>Не зарегистрированы? <a href="/reg">Регистрация</a></span>
+</section>
+
+<script>
+    $('.button-submit').bind('click', function(event) {
+        var user = {
+            email: event.target.form.email.value,
+            password: event.target.form.password.value,
+        }
+
+        var list_users = JSON.parse(localStorage.getItem('list_users')) || [];
+        var check = false;
+
+        for (var i = 0; i < list_users.length; i++) {
+            if (list_users[i].email === user.email && list_users[i].password === user.password ) {
+                check = true;
+            }
+        }
+
+        if (check) {
+            localStorage.setItem('auth_user', JSON.stringify(user));
+
+            window.location.replace('/');
+        } else {
+            alert("Неправильно")
+        }
+    })
+</script>

@@ -44,7 +44,6 @@ a:hover {
     position: fixed;
     background-color: #fff;
     width: 400px;
-    height: 400px;
     color: #000;
     z-index: 999;
     padding: 12px;
@@ -161,6 +160,17 @@ a:hover {
     border: none;
     border-radius: 4px;
     color: #fff;
+
+    min-width: 100px;
+}
+
+.btn-c {
+    min-width: 100px;
+    outline: none;
+    padding: 12px 8px 12px 8px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    color: #000;
 }
 
 .header-hero {
@@ -326,4 +336,21 @@ a:hover {
     display: flex;
     flex-direction: column;
     padding: 8px;
+}
+.price-list {
+    display: flex;
+
+    flex-direction: column;
+}
+.price-sushi {
+    margin-bottom: 8px;
+    padding: 14px;
+    cursor: pointer;
+    color: #fff;
+
+    transition-duration: .30s;
+}
+
+.price-sushi:hover {
+    background-color: red;
 }

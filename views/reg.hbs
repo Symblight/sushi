@@ -1,0 +1,28 @@
+<section class="container">
+    <h1>{{title}}</h1>
+    <form class="form">
+        <input class="form-item" name="email" type="email" placeholder="Почта">
+        <input class="form-item" name="password" type="password" placeholder="Пароль">
+        <input class="button-submit" type="submit" onclick="event.preventDefault();" value="Регистрация">
+    </form>
+</section>
+
+<script>
+    $('.button-submit').bind('click', function(event) {
+        var user = {
+            email: event.target.form.email.value,
+            password: event.target.form.password.value,
+        }
+
+        var list_users = JSON.parse(localStorage.getItem('list_users')) || [];
+        list_users.push(user)
+
+        localStorage.setItem('auth_user', JSON.stringify(user));
+
+        localStorage.setItem('list_users', JSON.stringify(list_users));
+
+        alert('Успешно!')
+
+        window.location.replace('/');
+    })
+</script>

@@ -1,0 +1,55 @@
+<section class="container">
+    <h1>{{ title }}</h1>
+    <div>
+        <span>Название</span>
+        <div id="price-list">
+            {{#each price}}
+                <article class="price-sushi" id="sushi-p-{{id}}">{{title}}</article>
+            {{/each}}
+        </div>
+    </div>
+    <form class="form">
+        <input class="form-item"  type="text" name="text" placeholder="название" />
+        <input class="button-submit" type="submit" value="Добавить" id="sub" onclick="event.preventDefault();"/>
+    </form>
+    <div class="modals">
+        {{!-- MODALS --}}
+
+        {{!-- <div class="modal-wrap" id="modal-delete">
+            <div class="modal-content" >
+                <h2>Удалить?</h2>
+                <button class="btn-m button-submit" onclick='onDelete()'>Да</button>
+                <button class="btn-m btn-c" onclick='onCancel()'>Отмена</button>
+            </div>
+        </div>  --}}
+    </div>
+    
+</section>
+
+<script>
+
+    $("#sub").bind('click', function(event) {
+        var user = JSON.parse(localStorage.getItem('auth_user'));
+
+        if (user) {
+            var list = document.getElementById('price-list');
+            var article = document.createElement('article');
+            article.innerHTML = event.target.form.text.value;
+            article.className = "price-sushi"
+
+            list.appendChild(article);
+        } else {
+             window.location.replace('/auth');
+        }
+    });
+
+    $(".price-sushi").bind('dblclick', function(event) {
+        var user = JSON.parse(localStorage.getItem('auth_user'));
+
+        if (user) {
+            event.target.remove();
+        } else {
+             window.location.replace('/auth');
+        }
+    });
+</script>

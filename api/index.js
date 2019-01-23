@@ -6,20 +6,16 @@ var data = require('../data.json');
 
 var router = express.Router();
 
-router.get('/', function (req, res) {
-    res.send("hey").status(200);
-});
-
 router.post('/jobs', function(req, res) {
-    var job = req.body.job;
+    var newData = data;
+    newData.jobs.push({
+        ...req.body.job,
+        id : Math.floor(Date.now() /  1000)
+    });
 
-    job.id = Math.floor(Date.now() /  1000);
+    fs.writeFileSync(path.resolve(__dirname,"../data.json"), JSON.stringify(newData));
 
-    var newData = data.jobs.push(job);
-
-    fs.writeFileSync(path.resolve(__dirname,"../data.json"), newData);
-
-    res.send("succeful").status(200);
+   res.status(200).send("succeful");
 })
 
 router.post('/review', function(req, res) {
